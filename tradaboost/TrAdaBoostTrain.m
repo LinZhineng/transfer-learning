@@ -1,4 +1,9 @@
 function [model, beta ] = TrAdaboostTrain(tdX,tdY,tsX,tsY)
+    %%tdX: features from source domain
+    %%tdY: labels from source domain
+    %%tsX: features from target domain
+    %%tsY: labels from target domain
+
     tX = [tdX ; tsX];
     tY = [tdY ; tsY];
     n = size(tdY,1);
@@ -9,7 +14,7 @@ function [model, beta ] = TrAdaboostTrain(tdX,tdY,tsX,tsY)
     beta = zeros(1,T);
     for t = 1:T
         p = w./(sum(abs(w)));
-        model{t} = svmtrain(p,tY,tX,'-t 0 -w-1 20 -w1 1');
+        model{t} = svmtrain(p,tY,tX,'-t 0');
         predict = svmpredict(tY,tX,model{t});
         sW = sum(w(n+1:m+n));
         et = sum(w(n+1:m+n).*(predict(n+1:m+n)~=tsY)/sW);
