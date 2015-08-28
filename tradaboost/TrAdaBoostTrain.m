@@ -13,8 +13,10 @@ function [model, beta ] = TrAdaboostTrain(tdX,tdY,tsX,tsY)
         predict = svmpredict(tY,tX,model{t});
         sW = sum(w(n+1:m+n));
         et = sum(w(n+1:m+n).*(predict(n+1:m+n)~=tsY)/sW);
-        if (et >= 0.5)
-            et = 0.5;
+        if et >= 0.5
+            et = 0.499;
+        elseif et == 0
+            et = 0.001;
         end
         bT = et/(1-et);
         beta(t) =bT;
