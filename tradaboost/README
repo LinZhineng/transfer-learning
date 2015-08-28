@@ -4,3 +4,4 @@ TrAdaBoostTrain.m is for training.
 TrPredict.m is for prediction
 
 Please compile the toolbox and addpath to toolbox before using.
+addpath('./toolbox/libsvm-weights-3.20/matlab');
