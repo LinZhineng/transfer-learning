@@ -1,4 +1,6 @@
 function label = mstrpredict(X, hyp, alpha)
+    % X: features of target data
+    
     M = length(hyp);
     l = size(X,1);
     label = zeros(l,1);
