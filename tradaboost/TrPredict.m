@@ -1,4 +1,6 @@
 function Ydash = TrPredict(X, svmmodels, beta)
+    % X: features of test data
+
     N = length(svmmodels);
     start = ceil(N/2);
     l = size(X,1);
