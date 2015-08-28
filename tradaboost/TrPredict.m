@@ -9,7 +9,7 @@ function Ydash = TrPredict(X, svmmodels, beta)
     Ydash = ones(l,1);
     for i = start:N
         predict = svmpredict(yOne,X,svmmodels{i});
-        predict = predict == 1;
+        %predict = predict == 1;
         yOne = yOne.*((beta(i)*ones(l,1)).^(-predict));
         yTwo = yTwo.*((beta(i)*ones(l,1)).^(-0.5));
     end
