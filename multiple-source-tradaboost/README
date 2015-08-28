@@ -1,1 +1,4 @@
 The code for "Boosting for transfer learning with multiple sources" by Yi Yao and Gianfranco Doretto.
+
+mstradaboost.m is for training
+mstrpredict.m is for prediction
