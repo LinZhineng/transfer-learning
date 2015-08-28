@@ -1,1 +1,8 @@
+This is the code for ‘Adaptive Boosting for Transfer Learning using Dynamic Updates’ by Samir Al-Stouhi and Chandan K. Reddy. Usually this code performs a little bit better than tradaboost.
 
+
+DuTrAdaBoostTrain.m is for training
+DuTrPredict.m is for prediction.
+
+Please compile the toolbox and addpath to toolbox before using.
+addpath('./toolbox/libsvm-weights-3.20/matlab');
