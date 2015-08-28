@@ -3,4 +3,5 @@ The code for "Boosting for transfer learning with multiple sources" by Yi Yao an
 mstradaboost.m is for training
 mstrpredict.m is for prediction
 
-(source,target.trn.features([1:3,target.trn.negImgs+1:target.trn.negImgs+3],:),target.trn.labels([1:3,target.trn.negImgs+1:target.trn.negImgs+3],:));
+Please compile the toolbox and addpath to toolbox before using.
+addpath('./toolbox/libsvm-weights-3.20/matlab');
