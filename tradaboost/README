@@ -1,1 +1,4 @@
 The code for "Boosting for Transfer Learning" by Wenyuan Dai, Qiang Yang, Gui-Rong Xue, Yong Yu 
+
+TrAdaBoostTrain.m is for training.
+TrPredict.m is for prediction
