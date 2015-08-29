@@ -15,8 +15,8 @@ function [model, beta ] = DuTrAdaboostTrain(tdX,tdY,tsX,tsY)
     beta = zeros(1,T);
     bsrc = 1/(1+sqrt(2*log(n)/T));
     for t = 1:T
-        p = w./(sum(abs(w)));
-        model{t} = svmtrain(p,tY,tX,'-t 0'); % using linear kernel
+        %p = w./(sum(abs(w)));
+        model{t} = svmtrain(w,tY,tX,'-t 0'); % using linear kernel
         predict = svmpredict(tY,tX,model{t});
         sW = sum(w(n+1:m+n));
         et = sum(w(n+1:m+n).*(predict(n+1:m+n)~=tsY))/sW;
