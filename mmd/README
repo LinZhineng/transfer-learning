@@ -1,0 +1,1 @@
+This code computes the empirical estimate of the distance between distributions P (source) and Q (target), as defined by Maximum Mean Discrepancy.
