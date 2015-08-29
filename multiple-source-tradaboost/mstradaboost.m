@@ -30,7 +30,7 @@ function  [hyp,alpha] = mstradaboost(source,targettrnfeatures,targettrnlabels)
 %                     W(l) = W(l)*1.3;
 %                 end
 %             end
-            model{k} = svmtrain(W,Y,X,'-t 0');
+            model{k} = svmtrain(W,Y,X,'-t 2');
             [predict,accuracy,prob] = svmpredict(Y,X,model{k});
             n = length(source(k).trn.labels);
             et(k) = sum(wt.weight.*(predict(n+1:m+n)~=targettrnlabels)/sW);

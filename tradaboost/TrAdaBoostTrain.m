@@ -14,7 +14,7 @@ function [model, beta ] = TrAdaboostTrain(tdX,tdY,tsX,tsY)
     beta = zeros(1,T);
     for t = 1:T
         %p = w./(sum(abs(w)));
-        model{t} = svmtrain(w,tY,tX,'-t 0');
+        model{t} = svmtrain(w,tY,tX,'-t 2');
         predict = svmpredict(tY,tX,model{t});
         sW = sum(w(n+1:m+n));
         et = sum(w(n+1:m+n).*(predict(n+1:m+n)~=tsY)/sW);
