@@ -1,0 +1,4 @@
+The code for "Domain Adaptation via Transfer Component Analysis" by Sinno Jialin Pan, Ivor W. Tsang, James T. Kwok and Qiang Yang
+
+Please compile the toolbox and addpath to toolbox before using.
+addpath('./toolbox/libsvm-3.20/matlab');

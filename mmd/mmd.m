@@ -1,4 +1,4 @@
-function [ dist ] = mmd( sourcefeatures,targetfeatures )
+function [ dist ] = mmd( sourcefeatures,targetfeatures,sigma )
 %MMD Summary of this function goes here
 %   This code computes the empirical estimate of the distance between
 %   distributions P (source) and Q (target), as defined by Maximum Mean
@@ -11,7 +11,6 @@ function [ dist ] = mmd( sourcefeatures,targetfeatures )
 %   (otherwise)
     
     %% compute K
-    sigma = size(sourcefeatures,2);
     Kss = rbf_dot(sourcefeatures,sourcefeatures,sigma);
     Kst = rbf_dot(sourcefeatures,targetfeatures,sigma);
     Kts = rbf_dot(targetfeatures,sourcefeatures,sigma);
