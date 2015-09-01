@@ -1,4 +1,7 @@
 The code for "Domain Adaptation via Transfer Component Analysis" by Sinno Jialin Pan, Ivor W. Tsang, James T. Kwok and Qiang Yang
 
+The main function of tca is ‘tca.m’.
+You can refer to ‘test.m’ to see an example of how to use tca.
+
 Please compile the toolbox and addpath to toolbox before using.
 addpath('./toolbox/libsvm-3.20/matlab');
